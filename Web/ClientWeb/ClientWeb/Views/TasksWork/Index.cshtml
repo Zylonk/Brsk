@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "/Views/Shared/_TaskLayout.cshtml";
+}
+<div class="container">
+    <h1 class="my-3 text-center"></h1>
+    <h1>Задачи</h1>
+
+    <a class="text-center" href="/taskswork/addtask">Добавить</a>
+    <table class="table table-hover table-borderless">
+        <thead>
+            <tr>
+                
+                <th>Описание</th>
+                <th>Время</th>
+                <th>Приоритет</th>
+                <th>Done</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var i in ViewBag.Tasks)
+                {
+                    <tr>
+                        <td>@i.Description</td>
+                        <td>@i.Timeframe</td>
+                        <td>@i.Priority</td>
+                        <td>@i.Done</td>
+                        <td><a class="text-center" href="/TasksWork/PutTask/@i.Id">Редактировать</a></td>
+                    </tr>
+                }
+            } 
+        </tbody>
+    </table>
+</div>

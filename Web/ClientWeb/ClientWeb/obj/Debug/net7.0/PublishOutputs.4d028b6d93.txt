@@ -1,0 +1,8 @@
+C:\Users\zylon\Desktop\brskweb\ClientWeb.exe
+C:\Users\zylon\Desktop\brskweb\appsettings.Development.json
+C:\Users\zylon\Desktop\brskweb\appsettings.json
+C:\Users\zylon\Desktop\brskweb\ClientWeb.dll
+C:\Users\zylon\Desktop\brskweb\ClientWeb.deps.json
+C:\Users\zylon\Desktop\brskweb\ClientWeb.runtimeconfig.json
+C:\Users\zylon\Desktop\brskweb\ClientWeb.pdb
+C:\Users\zylon\Desktop\brskweb\Newtonsoft.Json.dll

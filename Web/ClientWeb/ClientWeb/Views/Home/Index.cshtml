@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Авторизация</div>
+
+                <div class="card-body">
+                    <form id="loginForm" asp-action="AuthUser" asp-controller="Home">
+                        <div class="row mb-3">
+                            <label for="login" class="col-md-4 col-form-label text-md-end">Логин</label>
+
+                            <div class="col-md-6">
+                                <input id="Username" type="text" class="form-control" name="Username" required autocomplete="login" autofocus>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong></strong>
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-end">Пароль</label>
+
+                            <div class="col-md-6">
+                                <input id="PasswordHash" type="password" class="form-control" name="PasswordHash" required autocomplete="current-password">
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong></strong>
+                                    </span>
+                            </div>
+                        </div>
+                         
+                        <div class="row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Войти
+                                </button>
+                            </div>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿@model Tasks
+@{
+    Layout = "/Views/Shared/_TaskLayout.cshtml";
+}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Редактирование</div>
+
+                <div class="card-body">
+                    <form  asp-action="PutsTask" asp-controller="TasksWork" asp-route-id="@Model.Id">
+                        <div class="row mb-3">
+                            <label for="Description" class="col-md-4 col-form-label text-md-end">Описание</label>
+
+                            <div class="col-md-6">
+                                <input id="Description" type="text" class="form-control" name="Description" required autocomplete="login" autofocus value="@ViewBag.Description">
+                                <span class="invalid-feedback" role="alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="Description" class="col-md-4 col-form-label text-md-end">Описание</label>
+
+                            <div class="col-md-6">
+                                <input id="Timeframe" type="date" class="form-control" name="Timeframe" required autocomplete="login" autofocus value="@ViewBag.Timeframe">
+                                <span class="invalid-feedback" role="alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="Prioryty" class="col-md-4 col-form-label text-md-end">Приоретет</label>
+
+                            <div class="col-md-6">
+                                <select asp-for="Priority" class="form-control" id="priority">
+                                    <option>Низкий</option>
+                                    <option>Средний</option>
+                                    <option>Высокий</option>
+                                </select>
+
+                            </div>
+                            <div class="row mb-3">
+                                <label for="Done" class="col-md-4 col-form-label text-md-end">Активность</label>
+
+                                <div class="col-md-6">
+                                    <label class="col-form-label">Да</label>
+                                    <input type="radio" name="Done" value="Да" />
+                                    <label class="col-form-label">Нет</label>
+                                    <input type="radio" name="Done" value="Нет" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Редактировать
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <form asp-action="RemoveTask" asp-controller="TasksWork" asp-route-id="@Model.Id">
+                        <div class="row mb-1">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Удалить
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
